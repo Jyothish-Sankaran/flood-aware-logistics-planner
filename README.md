@@ -56,46 +56,48 @@ During monsoon seasons, Kerala experiences heavy rainfall, sudden flash floods, 
 
 ## 🏗️ System Architecture
 
+
+and replace it with this:
+
 ```mermaid
 flowchart TB
-    subgraph Data Layer
-        OSRM[OSRM Routing Engine + Snapshot Fallback]
-        Meteo[Open-Meteo IMD/ECMWF API + Snapshot Fallback]
-        GeoJSON[8 Curated Historical Flood Hotspots (Static)]
+
+    subgraph DATA["Data Layer"]
+        OSRM["OSRM Routing Engine + Snapshot Fallback"]
+        Meteo["Open-Meteo IMD/ECMWF API + Snapshot Fallback"]
+        GeoJSON["8 Curated Historical Flood Hotspots (Static)"]
     end
 
-    subgraph Core Deterministic Engines
-        CC[Cargo Classifier: Perishable / Fragile / Hazardous / General]
-        RE[Route & Flood Risk Engine: 4 Penalty Factors]
-        IE[Incident Engine: Multi-Source Corroboration & Decay]
-        IM[Impact Engine: Spatial Buffer <500m & Time-to-Impact]
-        Metrics[Impact Analytics: Fuel, Spoilage & Downtime]
+    subgraph CORE["Core Deterministic Engines"]
+        CC["Cargo Classifier: Perishable / Fragile / Hazardous / General"]
+        RE["Route & Flood Risk Engine: 4 Penalty Factors"]
+        IE["Incident Engine: Multi-Source Corroboration & Decay"]
+        IM["Impact Engine: Spatial Buffer <500m & Time-to-Impact"]
+        Metrics["Impact Analytics: Fuel, Spoilage & Downtime"]
     end
 
-    subgraph AI & Provenance Layer
-        WatsonProxy[Express Proxy: IBM watsonx.ai Granite 3.3]
-        FallbackNLP[Deterministic Keyword & Template Engine]
-        ProvBadge[Provenance Badge: watsonx.ai Granite vs Rule-Based]
+    subgraph AI["AI & Provenance Layer"]
+        WatsonProxy["Express Proxy: IBM watsonx.ai Granite 3.3"]
+        FallbackNLP["Deterministic Keyword & Template Engine"]
+        ProvBadge["Provenance Badge: watsonx.ai Granite vs Rule-Based"]
     end
 
-    subgraph User & Dispatcher Interface
-        TripWizard[1. Trip Planner & Cargo Wizard]
-        RouteIntel[2. Route Intelligence & Scoring]
-        ActiveMon[3. Active Monitoring & Demo Controls]
-        IncCenter[4. Incident Center & Feed]
-        DriverApp[5. Mobile Driver App & Offline Queue]
-        ImpactPage[6. Macro Impact & Cost Analytics]
-        GovPages[7. Responsible AI, Readiness & Limitations]
-        AuditDrawer[8. Global Immutable Audit Log Drawer]
+    subgraph UI["User & Dispatcher Interface"]
+        TripWizard["1. Trip Planner & Cargo Wizard"]
+        RouteIntel["2. Route Intelligence & Scoring"]
+        ActiveMon["3. Active Monitoring & Demo Controls"]
+        IncCenter["4. Incident Center & Feed"]
+        DriverApp["5. Mobile Driver App & Offline Queue"]
+        ImpactPage["6. Macro Impact & Cost Analytics"]
+        GovPages["7. Responsible AI, Readiness & Limitations"]
+        AuditDrawer["8. Global Immutable Audit Log Drawer"]
     end
 
-    Data Layer --> Core Deterministic Engines
-    Core Deterministic Engines --> User & Dispatcher Interface
-    WatsonProxy --> ProvBadge --> User & Dispatcher Interface
+    DATA --> CORE
+    CORE --> UI
+    WatsonProxy --> ProvBadge
+    ProvBadge --> UI
     FallbackNLP --> ProvBadge
-```
-
----
 
 ## 🎬 Canonical Demo Scenario (`TRIP-104`)
 
