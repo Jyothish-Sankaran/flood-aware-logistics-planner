@@ -53,52 +53,39 @@ During monsoon seasons, Kerala experiences heavy rainfall, sudden flash floods, 
   - **Immutable Audit Drawer**: Global slide-out drawer providing a tamper-evident, exportable JSON audit log of all system decisions.
 
 ---
-
 ## 🏗️ System Architecture
 
+The Logistic Decision Support System (LDSS) follows a layered architecture consisting of data sources, deterministic decision engines, AI and provenance services, and the user/dispatcher interface.
 
-and replace it with this:
+### Architecture Layers
 
-```mermaid
-flowchart TB
+| Layer | Components |
+|---|---|
+| **Data Layer** | OSRM Routing Engine, Open-Meteo IMD/ECMWF API, Curated Historical Flood Hotspots |
+| **Core Deterministic Engines** | Cargo Classifier, Route & Flood Risk Engine, Incident Engine, Impact Engine, Impact Analytics |
+| **AI & Provenance Layer** | IBM watsonx.ai Granite 3.3 Express Proxy, Deterministic NLP Fallback, Provenance Badge |
+| **User & Dispatcher Interface** | Trip Wizard, Route Intelligence, Active Monitoring, Incident Center, Driver App, Impact Analytics, Responsible AI, Audit Log |
 
-    subgraph DATA["Data Layer"]
-        OSRM["OSRM Routing Engine + Snapshot Fallback"]
-        Meteo["Open-Meteo IMD/ECMWF API + Snapshot Fallback"]
-        GeoJSON["8 Curated Historical Flood Hotspots (Static)"]
-    end
+### Data Flow
 
-    subgraph CORE["Core Deterministic Engines"]
-        CC["Cargo Classifier: Perishable / Fragile / Hazardous / General"]
-        RE["Route & Flood Risk Engine: 4 Penalty Factors"]
-        IE["Incident Engine: Multi-Source Corroboration & Decay"]
-        IM["Impact Engine: Spatial Buffer <500m & Time-to-Impact"]
-        Metrics["Impact Analytics: Fuel, Spoilage & Downtime"]
-    end
+**Data Layer**  
+↓  
+**Core Deterministic Engines**  
+↓  
+**AI & Provenance Layer**  
+↓  
+**User & Dispatcher Interface**
 
-    subgraph AI["AI & Provenance Layer"]
-        WatsonProxy["Express Proxy: IBM watsonx.ai Granite 3.3"]
-        FallbackNLP["Deterministic Keyword & Template Engine"]
-        ProvBadge["Provenance Badge: watsonx.ai Granite vs Rule-Based"]
-    end
+### Core Decision Flow
 
-    subgraph UI["User & Dispatcher Interface"]
-        TripWizard["1. Trip Planner & Cargo Wizard"]
-        RouteIntel["2. Route Intelligence & Scoring"]
-        ActiveMon["3. Active Monitoring & Demo Controls"]
-        IncCenter["4. Incident Center & Feed"]
-        DriverApp["5. Mobile Driver App & Offline Queue"]
-        ImpactPage["6. Macro Impact & Cost Analytics"]
-        GovPages["7. Responsible AI, Readiness & Limitations"]
-        AuditDrawer["8. Global Immutable Audit Log Drawer"]
-    end
+**Route + Weather + Flood Data**  
+→ **Cargo Classification**  
+→ **Risk & Route Analysis**  
+→ **Incident Corroboration**  
+→ **Impact Assessment**  
+→ **Decision Support & Dispatcher Interface**
 
-    DATA --> CORE
-    CORE --> UI
-    WatsonProxy --> ProvBadge
-    ProvBadge --> UI
-    FallbackNLP --> ProvBadge
-    ```
+---
 
     
 
