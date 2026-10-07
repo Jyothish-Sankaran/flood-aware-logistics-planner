@@ -1,0 +1,86 @@
+{
+  "source": "OSRM Kerala Corridor Snapshot (Offline Resilient)",
+  "timestamp": "2026-10-07T09:00:00Z",
+  "corridor": "Palakkad -> Kochi (NH 544 & Bypass)",
+  "routes": [
+    {
+      "id": "R1",
+      "name": "NH 544 via Thrissur-Chalakudy-Angamaly",
+      "description": "National highway freight corridor; fastest straight connection; passes through Angamaly.",
+      "distanceKm": 138.0,
+      "durationMinutes": 130,
+      "eta": "11:10",
+      "coordinates": [
+        [10.7867, 76.6548],
+        [10.6433, 76.5414],
+        [10.5898, 76.4719],
+        [10.5510, 76.3500],
+        [10.5350, 76.2450],
+        [10.4500, 76.2700],
+        [10.3800, 76.3000],
+        [10.3070, 76.3330],
+        [10.2500, 76.3600],
+        [10.1960, 76.3860],
+        [10.1450, 76.3680],
+        [10.1076, 76.3516],
+        [10.0400, 76.3200],
+        [9.9800, 76.2800],
+        [9.9312, 76.2673]
+      ],
+      "viaWaypoints": ["Thrissur", "Chalakudy", "Angamaly", "Aluva"],
+      "baseRiskScore": 35,
+      "defaultRole": "FASTEST"
+    },
+    {
+      "id": "R2",
+      "name": "Bypass via Chalakudy-Kodakara-Mala-Parur-Aluva",
+      "description": "Western coastal/state highway bypass; +17 min delay; bypasses Angamaly choke points; minimal flood exposure.",
+      "distanceKm": 152.0,
+      "durationMinutes": 147,
+      "eta": "11:27",
+      "coordinates": [
+        [10.7867, 76.6548],
+        [10.6433, 76.5414],
+        [10.5898, 76.4719],
+        [10.5510, 76.3500],
+        [10.5350, 76.2450],
+        [10.4500, 76.2700],
+        [10.3800, 76.3000],
+        [10.3070, 76.3330],
+        [10.2185, 76.2612],
+        [10.1800, 76.2400],
+        [10.1416, 76.2307],
+        [10.0750, 76.2650],
+        [10.0200, 76.2900],
+        [9.9800, 76.2800],
+        [9.9312, 76.2673]
+      ],
+      "viaWaypoints": ["Thrissur", "Chalakudy", "Mala", "North Paravur", "Aluva"],
+      "baseRiskScore": 18,
+      "defaultRole": "SAFEST"
+    },
+    {
+      "id": "R3",
+      "name": "Inland Alternative via Shornur-Perumbavoor",
+      "description": "Eastern inland corridor; avoids coastal waterlogging but has moderate river-crossing vulnerability.",
+      "distanceKm": 165.0,
+      "durationMinutes": 161,
+      "eta": "11:41",
+      "coordinates": [
+        [10.7867, 76.6548],
+        [10.7710, 76.3780],
+        [10.7600, 76.2700],
+        [10.6900, 76.3300],
+        [10.6000, 76.2400],
+        [10.4800, 76.4000],
+        [10.3500, 76.4800],
+        [10.1150, 76.4750],
+        [10.0150, 76.3450],
+        [9.9312, 76.2673]
+      ],
+      "viaWaypoints": ["Ottapalam", "Shornur", "Perumbavoor", "Kakkanad"],
+      "baseRiskScore": 42,
+      "defaultRole": "INLAND_ALTERNATIVE"
+    }
+  ]
+}

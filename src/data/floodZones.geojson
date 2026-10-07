@@ -1,0 +1,197 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "title": "Historical flood-prone zones in Kerala",
+    "disclaimer": "Historical flood-prone zones (illustrative, curated from 2018/2019 flood records), static layer",
+    "isStatic": true,
+    "source": "State Disaster Management records (Curated for Hackathon Demo)"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "FZ-01",
+        "name": "Chalakudy River Basin Flood Zone",
+        "district": "Thrissur",
+        "severity": "HIGH",
+        "description": "Prone to river overflow during heavy dam discharge. Historic 2018 inundation zone.",
+        "riskFactor": 0.85
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [76.3050, 10.3250],
+            [76.3550, 10.3200],
+            [76.3700, 10.2900],
+            [76.3400, 10.2750],
+            [76.2950, 10.2950],
+            [76.3050, 10.3250]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "FZ-02",
+        "name": "Periyar River Floodplain (Aluva-Chowwara)",
+        "district": "Ernakulam",
+        "severity": "HIGH",
+        "description": "Low-lying bank areas near Aluva Manappuram and Companypady.",
+        "riskFactor": 0.80
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [76.3300, 10.1300],
+            [76.3800, 10.1250],
+            [76.3900, 10.0900],
+            [76.3450, 10.0800],
+            [76.3200, 10.1050],
+            [76.3300, 10.1300]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "FZ-03",
+        "name": "Thrissur Kole Wetlands Lowland",
+        "district": "Thrissur",
+        "severity": "MEDIUM",
+        "description": "Agricultural wetland basin below sea level; high water retention.",
+        "riskFactor": 0.65
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [76.1500, 10.5300],
+            [76.2000, 10.5100],
+            [76.1900, 10.4500],
+            [76.1300, 10.4600],
+            [76.1500, 10.5300]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "FZ-04",
+        "name": "Kalamassery Low Basin",
+        "district": "Ernakulam",
+        "severity": "MEDIUM",
+        "description": "Industrial canal catchment prone to waterlogging during heavy downpours.",
+        "riskFactor": 0.60
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [76.3100, 10.0650],
+            [76.3450, 10.0600],
+            [76.3500, 10.0350],
+            [76.3050, 10.0400],
+            [76.3100, 10.0650]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "FZ-05",
+        "name": "Bharathapuzha Floodplain (Shornur-Pattambi)",
+        "district": "Palakkad",
+        "severity": "MEDIUM",
+        "description": "Riverbank inundation area affecting low-lying state highways.",
+        "riskFactor": 0.55
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [76.2400, 10.7700],
+            [76.2950, 10.7650],
+            [76.2850, 10.7300],
+            [76.2300, 10.7400],
+            [76.2400, 10.7700]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "FZ-06",
+        "name": "Kuttanad Waterway Belt",
+        "district": "Alappuzha",
+        "severity": "HIGH",
+        "description": "Deltaic region below sea-level with recurring monsoon waterlogging.",
+        "riskFactor": 0.90
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [76.4300, 9.5500],
+            [76.5400, 9.5400],
+            [76.5300, 9.4200],
+            [76.3800, 9.4400],
+            [76.4300, 9.5500]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "FZ-07",
+        "name": "Meenachil Basin (Kottayam Lowlands)",
+        "district": "Kottayam",
+        "severity": "MEDIUM",
+        "description": "Flash-flood catchment zone downstream from Western Ghats.",
+        "riskFactor": 0.70
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [76.5000, 9.6500],
+            [76.5700, 9.6300],
+            [76.5600, 9.5700],
+            [76.4900, 9.5800],
+            [76.5000, 9.6500]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "FZ-08",
+        "name": "Pampa River Zone (Ranni-Aranmula)",
+        "district": "Pathanamthitta",
+        "severity": "HIGH",
+        "description": "River swelling causes road cutoffs in central Travancore.",
+        "riskFactor": 0.85
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [76.6800, 9.3800],
+            [76.7800, 9.3900],
+            [76.7700, 9.3100],
+            [76.6600, 9.3200],
+            [76.6800, 9.3800]
+          ]
+        ]
+      }
+    }
+  ]
+}

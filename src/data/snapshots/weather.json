@@ -1,0 +1,66 @@
+{
+  "source": "Open-Meteo Kerala Weather Snapshot",
+  "timestamp": "2026-10-07T09:00:00Z",
+  "waypoints": [
+    {
+      "location": "Palakkad",
+      "lat": 10.7867,
+      "lng": 76.6548,
+      "precipitationMm": 4.2,
+      "precipitationProbability": 45,
+      "condition": "Light Rain",
+      "windSpeedKmh": 18,
+      "temperatureC": 27.5
+    },
+    {
+      "location": "Thrissur",
+      "lat": 10.5276,
+      "lng": 76.2144,
+      "precipitationMm": 18.5,
+      "precipitationProbability": 80,
+      "condition": "Heavy Showers",
+      "windSpeedKmh": 28,
+      "temperatureC": 25.8
+    },
+    {
+      "location": "Chalakudy",
+      "lat": 10.3070,
+      "lng": 76.3330,
+      "precipitationMm": 24.0,
+      "precipitationProbability": 88,
+      "condition": "Heavy Monsoon Rain",
+      "windSpeedKmh": 32,
+      "temperatureC": 25.0
+    },
+    {
+      "location": "Angamaly",
+      "lat": 10.1960,
+      "lng": 76.3860,
+      "precipitationMm": 22.0,
+      "precipitationProbability": 85,
+      "condition": "Squally Rain & Gusts",
+      "windSpeedKmh": 34,
+      "temperatureC": 24.8
+    },
+    {
+      "location": "Aluva",
+      "lat": 10.1076,
+      "lng": 76.3516,
+      "precipitationMm": 14.2,
+      "precipitationProbability": 70,
+      "condition": "Moderate Rain",
+      "windSpeedKmh": 22,
+      "temperatureC": 26.2
+    },
+    {
+      "location": "Kochi",
+      "lat": 9.9312,
+      "lng": 76.2673,
+      "precipitationMm": 9.0,
+      "precipitationProbability": 60,
+      "condition": "Intermittent Showers",
+      "windSpeedKmh": 24,
+      "temperatureC": 28.0
+    }
+  ]
+}
