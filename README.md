@@ -98,6 +98,8 @@ flowchart TB
     WatsonProxy --> ProvBadge
     ProvBadge --> UI
     FallbackNLP --> ProvBadge
+    ```
+    
 
 ## 🎬 Canonical Demo Scenario (`TRIP-104`)
 
