@@ -99,6 +99,7 @@ flowchart TB
     ProvBadge --> UI
     FallbackNLP --> ProvBadge
     ```
+
     
 
 ## 🎬 Canonical Demo Scenario (`TRIP-104`)
